@@ -6,7 +6,7 @@ from model import LifeExpectancyModel
 from sklearn.tree import DecisionTreeRegressor
 
 # Modeli eğit
-data = load_data('../data/life-expectancy.xlsx')
+data = load_data('data/life-expectancy.xlsx')
 feature_columns = [col for col in data.columns if col != 'Life']
 X, y = preprocess_data(data, feature_columns)
 model = LifeExpectancyModel(DecisionTreeRegressor(random_state=42))
