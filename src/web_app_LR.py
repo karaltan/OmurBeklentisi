@@ -6,7 +6,7 @@ from model import LifeExpectancyModel
 from sklearn.linear_model import LinearRegression
 
 # Modeli eğit
-data = load_data('../data/life-expectancy.xlsx')
+data = load_data('data/life-expectancy.xlsx')
 feature_columns = [col for col in data.columns if col != 'Life']
 X, y = preprocess_data(data, feature_columns)
 model = LifeExpectancyModel(LinearRegression())
